@@ -2,14 +2,14 @@
 
 This tutorial with use Parsl: Parallel programming library for Python to:
 
-1. Request GPU nodes from the fe.cs.uchicago cluster
+1. Request GPU nodes from the **fe.ai.cs.uchicago.edu** cluster
 2. Demo launching a Pytorch based MNIST training example in various GPU configurations
 3. Show checkpoint and restart functionality.
 
 
 ## Setup your environment
 
-fe.cs.uchicago cluster comes with a conda installation already available. We'll be using this
+**fe.ai.cs.uchicago.edu** cluster comes with a conda installation already available. We'll be using this
 to install the requirements for the demo.
 
 ```
