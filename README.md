@@ -19,6 +19,16 @@ $ pip install parsl==1.0.0
 $ conda install -c torch torchvision
 ```
 
+Let's check the environment sanity with a basic mnist application:
+
+```
+# This should print a sequence of results from training, this will be slow running on the login node
+(parsl_py3.7) $ python3 torch_mnist.py --epochs=1
+
+# Let's config parsl is installed. This should print 1.0.0
+(parsl_py3.7) $ python3 -c "import parsl; print(f'Parsl version: {parsl.__version__}')"
+```
+
 ## Parsl Configuration
 
 A sample configuration file `config.py` contains a config object that requests nodes

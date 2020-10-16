@@ -119,7 +119,6 @@ def main():
     test_loader = torch.utils.data.DataLoader(dataset2, **kwargs)
 
     model = Net().to(device)
-    print("Here :", type(args.lr), args.lr)
     optimizer = optim.Adadelta(model.parameters(), lr=args.lr)
 
     scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
