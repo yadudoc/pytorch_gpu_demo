@@ -53,6 +53,12 @@ The `basic_grid_search.py` example shows you the following :
 2. `run_mnist` takes a range of batch sizes and epochs, and launches the `torch_mnist` application
 3. The `torch_mnist` application is a `bash_app` that invokes the `torch_mnist.py` example from [pytorch examples](https://github.com/pytorch/examples/tree/master/mnist) from the commandline on each worker which is bound to 1 GPU on the cluster nodes.
 
+### How to run:
+
+```
+(parsl_py3.7) $ python3 basic_grid_search.py
+```
+
 ## Checkpointed runs
 
 The `checkpoint_test.py` along with `torch_mnist_checkpointed.py` shows you how to run torch applications with checkpoint and restart functionality.
@@ -66,6 +72,11 @@ The key updates to `torch_mnist_checkpointed.py` are:
 `checkpoint_test.py` uses a `python_app` that explicitly adds the current directory to the module path,
 so that the methods in the `torch_mnist_checkpointed` module can be imported on the compute node which don't share the python environment on the login node. This test sets a low walltime so that workers and their mnist training tasks are terminated due to node loss to simulate a failure. The test sets `config.retries=3` so that the application is rerun and with checkpoint restart support, very little compute is lost.
 
+### How to run:
+
+```
+(parsl_py3.7) $ python3 checkpoint_test.py
+```
 
 
 
