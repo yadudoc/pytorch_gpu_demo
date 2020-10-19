@@ -16,11 +16,12 @@ def platinfo(sleep_dur=10):
     import platform
     import torch
     import time
+    import os
     name = platform.uname().node
-    dev = torch.cuda.current_device()
     dev_count = torch.cuda.device_count()
     time.sleep(sleep_dur)
-    return name, dev, dev_count
+    
+    return f"Node:{name}, Device_count:{dev_count}, Visible_devices:{os.environ['CUDA_VISIBLE_DEVICES']}"
 
 def test_platform():
 
